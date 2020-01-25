@@ -1,0 +1,118 @@
+﻿@page
+@model CarWorkshop.Pages.Cars.EditModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-info">Edit Cars</h2>
+<br />
+
+<div class="row backgroundwhite border">
+    <div class="col-md-8">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="car.Id" hidden />
+            <input type="hidden" asp-for="car.UserId" />
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="car.VIN"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="car.VIN" class="form-control" />
+                    </div>
+                    <span asp-validation-for="car.VIN" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="car.Make"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="car.Make" class="form-control" />
+                    </div>
+                    <span asp-validation-for="car.Make" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="car.Model"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="car.Model" class="form-control" />
+                    </div>
+                    <span asp-validation-for="car.Model" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="car.Style"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="car.Style" class="form-control" />
+                    </div>
+                    <span asp-validation-for="car.Style" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="car.Year"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="car.Year" class="form-control" />
+                    </div>
+                    <span asp-validation-for="car.Year" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="car.Miles"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="car.Miles" class="form-control" />
+                    </div>
+                    <span asp-validation-for="car.Miles" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="car.color"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="car.color" class="form-control" />
+                    </div>
+                    <span asp-validation-for="car.color" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-5 offset-2">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="submit" class="btn btn-info form-control" value="Save" />
+                        </div>
+                        <div class="col-6">
+                            <a asp-page="Index" asp-route-userId="@Model.car.UserId" class="btn btn-success form-control">Back to List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

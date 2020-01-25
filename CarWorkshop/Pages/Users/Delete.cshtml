@@ -1,0 +1,101 @@
+﻿@page
+@model CarWorkshop.Pages.Users.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-info">Delete Customer</h2>
+<br />
+
+<div class="row backgroundwhite border">
+    <div class="col-md-8">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="applicationuser.Id" hidden />
+            <input asp-for="applicationuser.Email" hidden />
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="applicationuser.Name"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="applicationuser.Name" disabled class="form-control" />
+                    </div>
+                    <span asp-validation-for="applicationuser.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="applicationuser.Email"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="applicationuser.Email" disabled class="form-control" />
+                    </div>
+                    <span asp-validation-for="applicationuser.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="applicationuser.PhoneNumber"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="applicationuser.PhoneNumber" disabled class="form-control" />
+                    </div>
+                    <span asp-validation-for="applicationuser.PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="applicationuser.Address"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="applicationuser.Address" disabled class="form-control" />
+                    </div>
+                    <span asp-validation-for="applicationuser.Address" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="applicationuser.City"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="applicationuser.City" disabled class="form-control" />
+                    </div>
+                    <span asp-validation-for="applicationuser.City" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="applicationuser.Postalcode"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="applicationuser.Postalcode" disabled class="form-control" />
+                    </div>
+                    <span asp-validation-for="applicationuser.Postalcode" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    <div>
+                        <partial name="_DeleteAndBackToListButton" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
